@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 벽화봉사활동</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Verdana;
+            margin: 0; 
+            padding: 0; 
+        }
+
+        .menu {
+            float: left;
+            width: 15%;
+            height: auto;
+            margin-left: 5.5%;
+        }
+        .menu a {
+            padding: 8px;
+            display: block;
+            width: 100%;
+            color: gray;
+            text-decoration: none;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-left: 5%;
+        }
+        nav {
+            background-color: #BDFFE3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-left: 1.5%;
+            width: 77%;
+            height: 100%;
+            border: 3px solid #87A2F1;
+            border-radius: 10px;
+            padding: 0 20px;
+            position: relative;
+        }
+        nav a {
+            position: relative; 
+            display: inline-block;
+        }
+        nav img {
+            transition: opacity 0.5s ease-in-out;
+            width: 100%;
+            margin-top: 15%;
+        }
+        nav a img.hover {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        nav a:hover img.normal {
+            opacity: 0;
+        }
+        nav a:hover img.hover {
+            opacity: 1;
+        }
+
+        .main {
+            background-color: #F2D7FF;
+            margin-top: 7px;
+            border: 3px solid #87A2F1;
+            border-radius: 10px;
+            float: right;
+            width: calc(95.7% - 22.5%); 
+            margin-right: 5.5%;
+            z-index: 1;
+            position: relative;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%; 
+            height: auto; 
+            z-index: 1;
+        }
+        .image-container img {
+            position: absolute;
+            height: auto;
+        }
+        .image-container img.d1 {
+            width: 20%;
+            margin-top: 40%; 
+            left: 0px; 
+            z-index: 3; 
+        }
+        .image-container img.d2 {
+            width: 10%;
+            margin-top: 10%; 
+            right: 0px;
+            z-index: 2; 
+        }
+        .image-container img.d3 {
+            width: 15%;
+            margin-top: 40%;
+            right: 0px;
+            z-index: 1; 
+        }
+
+        .main .image-container img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #div0 {
+            overflow: auto;
+        }
+        #div1 {
+            padding: auto;
+            text-align: center;
+        }
+        #div2 {
+            background-color: #87A2F1;
+            padding: 10px;
+            text-align: center;
+            margin-top: 7px;
+            position: relative;
+            z-index: 3;
+        }
+
+        @media only screen and (max-width: 620px) {
+            .menu, .main, .right {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+                gap: 10px;
+            }
+        }
+        
+    </style>
+    <link rel="stylesheet" href="scroll_snap.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/m1.png" class="d1" alt="">
+        <img src="img/m2.png" class="d2" alt="">
+        <img src="img/m3.png" class="d3" alt="">
+    </div>
+
+    <div id="div1">
+        <div class="header">
+            <a href="index.html"><img src="img/logo.png" width="90%"></a>
+            <nav>
+                <a href="a.html">
+                    <img src="img/왕곡 어린이집.png" class="normal" alt="">
+                    <img src="img/왕곡 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="b.html">
+                    <img src="img/오전 어린이집.png" class="normal" alt="">
+                    <img src="img/오전 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="c.html">
+                    <img src="img/해늘 어린이집.png" class="normal" alt="">
+                    <img src="img/해늘 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="d.html">
+                    <img src="img/밝은 누리 어린이집.png" class="normal" alt="">
+                    <img src="img/밝은 누리 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="e.html">
+                    <img src="img/남해 물건리 마을.png" class="normal" alt="">
+                    <img src="img/남해 물건리 마을2.png" class="hover" alt="">
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div id="div0">
+        <div class="menu">
+            <a>
+                <img src="img/b1.png" alt="">
+                <img src="img/b2.png" alt="">
+            </a>
+        </div>
+
+        <div class="main">
+            <div class="container">
+                <img src="img/c6.PNG" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div id="div2">
+        <img src="img/footer.png" width="100%" alt="">
+    </div>
+</body>
+</html>

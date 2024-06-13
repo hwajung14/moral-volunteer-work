@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오전 어린이집</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Verdana;
+            margin: 0;
+            padding: 0; 
+        }
+
+        .menu {
+            float: left;
+            width: 15%;
+            height: auto;
+            margin-left: 5.5%;
+        }
+        .menu a {
+            padding: 8px;
+            display: block;
+            width: 100%;
+            color: gray;
+            text-decoration: none;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-left: 5%;
+        }
+        nav {
+            background-color: #BDFFE3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            gap: 15px; 
+            margin-left: 1.5%;
+            width: 77%;
+            height: 100%;
+            border: 3px solid #87A2F1;
+            border-radius: 10px;
+            padding: 0 20px;
+            position: relative;
+        }
+        nav a {
+            position: relative; 
+            display: inline-block;
+        }
+        nav img {
+            transition: opacity 0.5s ease-in-out;
+            width: 100%;
+            margin-top: 15%;
+        }
+        nav a img.hover {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        nav a:hover img.normal {
+            opacity: 0;
+        }
+        nav a:hover img.hover {
+            opacity: 1;
+        }
+
+        .main {
+            background-color: #FFB1B1;
+            margin-top: 7px;
+            border: 3px solid #87A2F1;
+            border-radius: 10px;
+            float: right;
+            width: calc(95.7% - 22.5%); 
+            margin-right: 5.5%;
+            z-index: 1;
+            position: relative;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: auto; 
+            z-index: 1;
+        }
+        .image-container img {
+            position: absolute;
+            height: auto; 
+        }
+        .image-container img.d1 {
+            width: 20%;
+            margin-top: 40%; 
+            left: 0px;
+            z-index: 3;
+        }
+        .image-container img.d2 {
+            width: 10%;
+            margin-top: 10%;
+            right: 0px;
+            z-index: 2; 
+        }
+        .image-container img.d3 {
+            width: 15%;
+            margin-top: 40%;
+            right: 0px;
+            z-index: 1; 
+        }
+
+        .main .image-container img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #div0 {
+            overflow: auto;
+        }
+        #div1 {
+            padding: auto;
+            text-align: center;
+        }
+        #div2 {
+            background-color: #87A2F1;
+            padding: 10px;
+            text-align: center;
+            margin-top: 7px;
+            position: relative;
+            z-index: 3;
+        }
+
+        @media only screen and (max-width: 620px) {
+            .menu, .main, .right {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+                gap: 10px;
+            }
+        }
+        
+    </style>
+    <link rel="stylesheet" href="scroll_snap1.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/2-1.png" class="d1" alt="">
+        <img src="img/2-2.png" class="d2" alt="">
+        <img src="img/2-3.png" class="d3" alt="">
+    </div>
+
+    <div id="div1">
+        <div class="header">
+            <a href="index.html"><img src="img/logo.png" width="90%"></a>
+            <nav>
+                <a href="a.html">
+                    <img src="img/왕곡 어린이집.png" class="normal" alt="">
+                    <img src="img/왕곡 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="b.html">
+                    <img src="img/오전 어린이집2.png">
+                </a>
+                <a href="c.html">
+                    <img src="img/해늘 어린이집.png" class="normal" alt="">
+                    <img src="img/해늘 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="d.html">
+                    <img src="img/밝은 누리 어린이집.png" class="normal" alt="">
+                    <img src="img/밝은 누리 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="e.html">
+                    <img src="img/남해 물건리 마을.png" class="normal" alt="">
+                    <img src="img/남해 물건리 마을2.png" class="hover" alt="">
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div id="div0">
+        <div class="menu">
+            <a>
+                <img src="img/b1.png" alt="">
+                <img src="img/b2.png" alt="">
+            </a>
+        </div>
+
+        <div class="main">
+            <div class="container">
+                <section class="area">
+                    <h1>[오전 어린이집]</h1>
+                    <p><img src="img/b.jpg" width="60%"alt=""></p>
+                    <p>두번째 벽화봉사는 경기도 의왕시 오전로에 위치한 오전 어린이집에서의 벽화작업이었습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/b2-2.PNG" width="60%"alt=""></p>
+                    <p>유치원 옥상 벽의 두곳에 벽화와 옥상 바닥에 1개의 바닥놀이를 작업했습니다.
+                        옥상에서 작업하는 것이 새로웠습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/b3.PNG" width="60%"alt=""></p>
+                    <p>화단 부분에 위치한 벽에는 기존 화단에 있던 화분들과 꽃들에 어울리 수 있게 나비와 꽃을 그리기로 했습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/b4.PNG" width="60%"alt=""></p>
+                    <p>
+                        앞서 말 했듯이 바닥놀이의 디자인을 정해두고 작업하는 것이 아니기 때문에 캐릭터 선정에 봉사 참여자분들과 의견을 나눠야했습니다. 어린이집이라는 점을 감안해 어린이 누구나 알고 좋아할 캐릭터를 고민했고, 이번에는 뽀로로 바닥놀이를 그리기로 했습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/b5.PNG" width="60%"alt=""></p>
+                    <p>
+                       페인트가 칠해지는 곳 외에는 페인트가 묻으면 안되기 때문에 비닐과 마스킹 테이프를 이용하여 오염을 막았습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/b6.PNG" width="60%"alt=""></p>
+                    <p>
+                        밑색이 모두 마른 뒤에는 뽀로로의 이목구비를 그렸습니다. 캐릭터 특징에 둥근 곡선이 많은 탓인지 좌우 대칭을 맞추며 작업하는데 어려움이 있었습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/b8.PNG" width="60%"alt=""></p>
+                    <p>
+                        흰색같은 경우에는 바닥색이 잘 비쳐 여러번 덧칠 해주었습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/b10.PNG" width="60%"alt=""></p>
+                    <p>
+                        다른 벽에도 통일감 있게 뽀로로와 친구들을 그렸고, 공간의 여유가 있어 신발던지기도 그렸습니다.</p>
+                </section>
+                <section class="area">
+                    <h1>후기 사진</h1>
+                    <p><img src="img/b14.PNG" width="60%"alt=""></p>
+                </section>
+                <section class="area">
+                    <h1>후기 사진</h1>
+                    <p><img src="img/b15.PNG" width="60%"alt=""></p>
+                </section>
+                <section class="area">
+                    <h1>여담</h1>
+                    <p><img src="img/b.PNG" width="60%"alt=""></p>
+                    <p>어린이집 선생님과 어린이들이 준비해준 간식과 그림입니다. 이 간식 때문인지 더 기억에 남는 작업이었습니다.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div id="div2">
+        <img src="img/footer.png" width="100%" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밝은 누리 어린이집</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Verdana;
+            margin: 0; 
+            padding: 0; 
+        }
+
+        .menu {
+            float: left;
+            width: 15%;
+            height: auto;
+            margin-left: 5.5%;
+        }
+        .menu a {
+            padding: 8px;
+            display: block;
+            width: 100%;
+            color: gray;
+            text-decoration: none;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-left: 5%;
+        }
+        nav {
+            background-color: #BDFFE3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            gap: 15px; 
+            margin-left: 1.5%;
+            width: 77%;
+            height: 100%;
+            border: 3px solid #87A2F1;
+            border-radius: 10px;
+            padding: 0 20px;
+            position: relative;
+        }
+        nav a {
+            position: relative; 
+            display: inline-block;
+        }
+        nav img {
+            transition: opacity 0.5s ease-in-out;
+            width: 100%;
+            margin-top: 15%;
+        }
+        nav a img.hover {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        nav a:hover img.normal {
+            opacity: 0;
+        }
+        nav a:hover img.hover {
+            opacity: 1;
+        }
+
+        .main {
+            background-color: #D8C1FF;
+            margin-top: 7px;
+            border: 3px solid #87A2F1;
+            border-radius: 10px;
+            float: right;
+            width: calc(95.7% - 22.5%);
+            margin-right: 5.5%;
+            z-index: 1;
+            position: relative; 
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%; 
+            height: auto; 
+            z-index: 1;
+        }
+        .image-container img {
+            position: absolute;
+            height: auto; 
+        }
+        .image-container img.d1 {
+            width: 20%;
+            margin-top: 40%; 
+            left: 0px;
+            z-index: 3; 
+        }
+        .image-container img.d2 {
+            width: 10%;
+            margin-top: 10%; 
+            right: 0px; 
+            z-index: 2;
+        }
+        .image-container img.d3 {
+            width: 15%;
+            margin-top: 40%;
+            right: 0px; 
+            z-index: 1; 
+        }
+
+    
+        .main .image-container img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #div0 {
+            overflow: auto;
+        }
+        #div1 {
+            padding: auto;
+            text-align: center;
+        }
+        #div2 {
+            background-color: #87A2F1;
+            padding: 10px;
+            text-align: center;
+            margin-top: 7px;
+            position: relative;
+            z-index: 3;
+        }
+
+        @media only screen and (max-width: 620px) {
+            .menu, .main, .right {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+                gap: 10px;
+            }
+        }
+        
+    </style>
+    <link rel="stylesheet" href="scroll_snap3.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/4-1.png" class="d1" alt="">
+        <img src="img/4-2.png" class="d2" alt="">
+        <img src="img/4-3.png" class="d3" alt="">
+    </div>
+
+    <div id="div1">
+        <div class="header">
+            <a href="index.html"><img src="img/logo.png" width="90%"></a>
+            <nav>
+                <a href="a.html">
+                    <img src="img/왕곡 어린이집.png" class="normal" alt="">
+                    <img src="img/왕곡 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="b.html">
+                    <img src="img/오전 어린이집.png" class="normal" alt="">
+                    <img src="img/오전 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="c.html">
+                    <img src="img/해늘 어린이집.png" class="normal" alt="">
+                    <img src="img/해늘 어린이집2.png" class="hover" alt="">
+                </a>
+                <a href="d.html">
+                    <img src="img/밝은 누리 어린이집2.png">
+                </a>
+                <a href="e.html">
+                    <img src="img/남해 물건리 마을.png" class="normal" alt="">
+                    <img src="img/남해 물건리 마을2.png" class="hover" alt="">
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div id="div0">
+        <div class="menu">
+            <a>
+                <img src="img/b1.png" alt="">
+                <img src="img/b2.png" alt="">
+            </a>
+        </div>
+
+        <div class="main">
+            <div class="container">
+                <section class="area">
+                    <h1>[밝은 누리 어린이집]</h1>
+                    <p><img src="img/d.png" width="60%"alt=""></p>
+                    <p>네번째 벽화봉사는 경기도 의왕시 백운초등길에 위치한 밝은 누리 어린이집에서의 벽화작업이었습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/d1.PNG" width="60%"alt=""></p>
+                    <p>작업 전 날에 비가 오기도 했고, 바닥에 이물질 많아 깔끔한 페인트칠을 위해 바닥 청소를 먼저 진행했습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/d3.PNG" width="60%"alt=""></p>
+                    <p>이번에는 신발 던지기도 같이 작업해주었습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/d4.PNG" width="60%"alt=""></p>
+                    <p>
+                        땅따먹기 마스킹 작업을 하고 페인트를 칠하는 모습입니다. 햇빛이 정말 강한 날이었어서 이후에는 파라솔과 우산을 들고 작업을 진행해야 했습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/d5.PNG" width="60%"alt=""></p>
+                    <p>
+                       이번 기차 놀이에는 재미 요소를 더 넣어 작업했습니다. 꽝 칸도 있고 두 칸 더 이동할 수 있는 칸도 나름 규칙있게 만들어 재미를 주고자 했습니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/d6.PNG" width="60%"alt=""></p>
+                    <p>
+                        완성된 신발던지기 입니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/d7.PNG" width="60%"alt=""></p>
+                    <p>
+                        완성된 땅따먹기 입니다.</p>
+                </section>
+                <section class="area">
+                    <p><img src="img/d8.PNG" width="60%"alt=""></p>
+                    <p>
+                        완성된 기차놀이 입니다.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div id="div2">
+        <img src="img/footer.png" width="100%" alt="">
+    </div>
+</body>
+</html>
